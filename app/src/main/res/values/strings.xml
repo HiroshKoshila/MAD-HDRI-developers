@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MAD-HDRI Developers</string>
+    <string name="topic001">iTourSL</string>
+    <string name="title001">iTourSL</string>
+    <string name="title002">Travel planner in Sri Lanka</string>
+    <string name="tiltle003">Best guidance to plan your itinerary and explore amazing destinations in Sri Lanka.</string>
+    <string name="wbtn1">Login</string>
+    <string name="wbtn2">sign up</string>
+    <string name="logo1">logo</string>
+    <string name="welcome1">ambuluwawa</string>
+</resources>
