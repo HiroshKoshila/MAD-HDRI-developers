@@ -15,16 +15,14 @@
         app:srcCompat="@drawable/wel4" />
 
     <ImageView
-        android:id="@+id/wel2back2"
-        android:layout_width="411dp"
-        android:layout_height="438dp"
-        android:layout_marginTop="20dp"
-        android:contentDescription="@string/wel2back1"
+        android:id="@+id/wel2back4"
+        android:layout_width="396dp"
+        android:layout_height="432dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/whiteRed2" />
+        app:srcCompat="@drawable/whitered2" />
 
     <Button
         android:id="@+id/wel2btn2"
@@ -64,16 +62,15 @@
         android:id="@+id/wel2text1"
         android:layout_width="320dp"
         android:layout_height="53dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/abeezee"
         android:text="@string/wel2text1"
         android:textColor="#101010"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/wel2back2"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/wel2back2"
-        app:layout_constraintTop_toTopOf="@+id/wel2back2" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wel2back4" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -96,8 +93,8 @@
         android:text="@string/wel2text2"
         android:textColor="#494545"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/wel2back2"
-        app:layout_constraintStart_toStartOf="@+id/wel2back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wel2btn2" />
 
     <TextView
@@ -112,6 +109,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2back2" />
+        app:layout_constraintTop_toBottomOf="@+id/wel2back4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
