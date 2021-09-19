@@ -24,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/whiteRed2" />
+        app:srcCompat="@drawable/whitered2" />
 
     <Button
         android:id="@+id/wel2btn2"

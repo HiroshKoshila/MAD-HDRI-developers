@@ -14,4 +14,15 @@
     <string name="wel2btn2">business account</string>
     <string name="wel2text2">You can use this app as a user or business owner</string>
     <string name="wel2text3">iTourSL</string>
+    <string name="registertext">Register</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shopownerreg">Shop</string>
+    <string name="transportproviderreg">Transport</string>
+    <string name="restownerreg">Restaurant</string>
+    <string name="hotelowner">Hotel</string>
+    <string name="backreg">background</string>
+    <string name="contreg">container</string>
+
 </resources>
