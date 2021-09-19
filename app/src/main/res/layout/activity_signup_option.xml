@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SignupOption">
 
     <ImageView
-        android:id="@+id/wel2back1"
+        android:id="@+id/wel2back2"
         android:layout_width="421dp"
         android:layout_height="812dp"
         android:contentDescription="@string/wel2back1"
@@ -14,19 +15,47 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wel4" />
 
-    <ImageView
-        android:id="@+id/wel2back4"
-        android:layout_width="396dp"
-        android:layout_height="432dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/wel2back4"
+    <TextView
+        android:id="@+id/wel2text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/abeezee"
+        android:text="@string/wel2text3"
+        android:textColor="#F3EFEF"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/whitered2" />
+        app:layout_constraintTop_toBottomOf="@+id/welimage3" />
+
+    <ImageView
+        android:id="@+id/welimage3"
+        android:layout_width="404dp"
+        android:layout_height="422dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/welimage2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/white" />
+
+    <TextView
+        android:id="@+id/wel2text7"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:text="@string/wel2text2"
+        android:textColor="#494545"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wel2btn5" />
 
     <Button
-        android:id="@+id/wel2btn2"
+        android:id="@+id/wel2btn5"
         android:layout_width="334dp"
         android:layout_height="71dp"
         android:layout_marginTop="20dp"
@@ -40,10 +69,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2btn1" />
+        app:layout_constraintTop_toBottomOf="@+id/wel2btn4" />
 
     <Button
-        android:id="@+id/wel2btn1"
+        android:id="@+id/wel2btn4"
         android:layout_width="325dp"
         android:layout_height="73dp"
         android:layout_marginTop="60dp"
@@ -57,13 +86,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2text1" />
+        app:layout_constraintTop_toBottomOf="@+id/wel2text6" />
 
     <TextView
-        android:id="@+id/wel2text1"
+        android:id="@+id/wel2text6"
         android:layout_width="320dp"
         android:layout_height="53dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/abeezee"
         android:text="@string/wel2text1"
         android:textColor="#101010"
@@ -71,10 +100,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/wel2back4" />
+        app:layout_constraintTop_toTopOf="@+id/welimage3" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView2"
         android:layout_width="145dp"
         android:layout_height="120dp"
         android:layout_marginTop="30dp"
@@ -83,33 +112,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo3" />
-
-    <TextView
-        android:id="@+id/wel2text2"
-        android:layout_width="300dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/abeezee"
-        android:gravity="center"
-        android:text="@string/wel2text2"
-        android:textColor="#494545"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2btn2" />
-
-    <TextView
-        android:id="@+id/wel2text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/abeezee"
-        android:text="@string/wel2text3"
-        android:textColor="#F3EFEF"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2back4" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
