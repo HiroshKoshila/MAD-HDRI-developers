@@ -20,4 +20,15 @@
     <string name="logedit2">Enter password</string>
     <string name="logtext1">Log In</string>
     <string name="shoptext">Shop Registration</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shopownerreg">Shop</string>
+    <string name="transportproviderreg">Transport</string>
+    <string name="restownerreg">Restaurant</string>
+    <string name="hotelowner">Hotel</string>
+    <string name="backreg">background</string>
+    <string name="contreg">container</string>
+    <string name="registertext">Register</string>
+
+
 </resources>
