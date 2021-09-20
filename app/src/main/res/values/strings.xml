@@ -30,5 +30,21 @@
     <string name="contreg">container</string>
     <string name="registertext">Register</string>
 
+    <string name="transportReg">transport layout</string>
+    <string name="registerimage">register image</string>
+    <string name="registername">Name</string>
+    <string name="transregdesc">Description</string>
+    <string name="transregaddress">Address</string>
+    <string name="transregno">Contact Number</string>
+    <string name="transregloaction">Location</string>
+    <string name="transregurl">Page URL(Optional)</string>
+    <string name="transregchoose">Upload references</string>
+    <string name="choosedimage">Choosed image</string>
+    <string name="transregusername">Username</string>
+    <string name="choose">Choose an image</string>
+    <string name="transregpassword">Password</string>
+    <string name="transregcreate">Create Account</string>
+
+
 
 </resources>
