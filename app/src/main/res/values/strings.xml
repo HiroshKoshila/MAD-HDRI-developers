@@ -16,4 +16,7 @@
     <string name="wel2text3">iTourSL</string>
     <string name="wel2back4">white</string>
     <string name="welimage2">white image</string>
+    <string name="logedit1">Enter email or username</string>
+    <string name="logedit2">Enter password</string>
+    <string name="logtext1">Log In</string>
 </resources>
