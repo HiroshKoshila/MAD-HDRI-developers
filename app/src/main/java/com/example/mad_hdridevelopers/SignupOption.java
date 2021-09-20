@@ -15,11 +15,21 @@ public class SignupOption extends AppCompatActivity {
         setContentView(R.layout.activity_signup_option);
 
         getSupportActionBar().hide();
+
         Button wel2btn5=findViewById(R.id.wel2btn5);
+        Button user =findViewById(R.id.wel2btn4);
+
         wel2btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeActivity();
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeActivity2();
             }
         });
     }
@@ -27,4 +37,10 @@ public class SignupOption extends AppCompatActivity {
         Intent business = new Intent(this,BusinessRegistration.class);
         startActivity(business);
     }
+
+    private void changeActivity2(){
+        Intent signup = new Intent(this,UserRegistration.class);
+        startActivity(signup);
+    }
+
 }
