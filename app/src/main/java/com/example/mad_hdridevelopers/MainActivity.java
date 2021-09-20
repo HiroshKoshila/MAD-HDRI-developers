@@ -18,11 +18,19 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Button signup = findViewById(R.id.wbtn2);
+        Button login = findViewById(R.id.wbtn1);
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeActivity();
+            }
+        });
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeActivity2();
             }
         });
 
@@ -31,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
     private void changeActivity(){
         Intent signup = new Intent(this,SignupOption.class);
         startActivity(signup);
+    }
+    private void changeActivity2(){
+        Intent login = new Intent(this,LoginPage.class);
+        startActivity(login);
     }
 
 }
