@@ -44,7 +44,15 @@
     <string name="choose">Choose an image</string>
     <string name="transregpassword">Password</string>
     <string name="transregcreate">Create Account</string>
-
+    <string name="userImageBtn">upload profile picture</string>
+    <string name="userNameView">Name</string>
+    <string name="userDescription001">Description</string>
+    <string name="userEmail001">Email</string>
+    <string name="UserEdit2">Description</string>
+    <string name="userPwd001">Enter Your Password</string>
+    <string name="userPwd002">Re-enter your password</string>
+    <string name="userEdit4">Password</string>
+    <string name="userbtn002">create account</string>
 
 
 </resources>

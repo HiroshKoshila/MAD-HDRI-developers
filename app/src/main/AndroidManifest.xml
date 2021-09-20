@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADHDRIDevelopers">
-        <activity android:name=".TransportProviderReg"></activity>
+        <activity android:name=".TransportProviderReg" />
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignupOption" />
