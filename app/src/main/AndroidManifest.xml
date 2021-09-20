@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADHDRIDevelopers">
         <activity android:name=".TransportProviderReg" />
+        <activity android:name=".UserRegistration"
+            android:parentActivityName=".SignupOption"/>
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignupOption" />
