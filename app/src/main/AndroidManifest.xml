@@ -9,9 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADHDRIDevelopers">
+        <activity
+            android:name=".RestaurantRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".HotelRegistration"
+            android:exported="true" />
+        <activity
+            android:name=".BudgetCal1"
+            android:exported="true" />
         <activity android:name=".TransportProviderReg" />
-        <activity android:name=".UserRegistration"
-            android:parentActivityName=".SignupOption"/>
+        <activity
+            android:name=".UserRegistration"
+            android:parentActivityName=".SignupOption" />
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignupOption" />
