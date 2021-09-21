@@ -61,7 +61,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/abeezee"
         android:text="@string/wel2btn2"
-        android:textColor="#FBF9F9"
+        android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:backgroundTint="#61B303"
@@ -69,7 +69,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2btn4" />
+        app:layout_constraintTop_toBottomOf="@+id/wel2btn4"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/wel2btn4"
@@ -86,7 +87,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wel2text6" />
+        app:layout_constraintTop_toBottomOf="@+id/wel2text6"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/wel2text6"

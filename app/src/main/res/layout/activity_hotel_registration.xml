@@ -1,50 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="SpeakableTextPresentCheck">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/transportReg">
+        tools:context=".HotelRegistration">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar10"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#a1cc03"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="iTourSL"
-            app:titleMarginStart="90dp"
-            app:titleTextColor="@color/white" />
 
         <ImageView
             android:id="@+id/RestImg1"
             android:layout_width="420dp"
             android:layout_height="143dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="6dp"
             android:contentDescription="@string/registerimage"
             android:src="@drawable/registerimage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/restRegTV1"
-            android:layout_width="122dp"
-            android:layout_height="38dp"
-            android:fontFamily="@font/abeezee"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_marginTop="4dp"
 
-            android:text="@string/registertext"
+            android:fontFamily="@font/abeezee"
+            android:text="@string/hotelRegTV1"
             android:textColor="#494545"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -63,9 +52,10 @@
             app:layout_constraintTop_toBottomOf="@+id/RestImg1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restNameTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/registername"
+                android:hint="@string/hotelNameTV"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,10 +73,11 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restDescTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:hint="@string/transregdesc"
+                android:hint="@string/hotelDescTV"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,9 +93,10 @@
             tools:layout_editor_absoluteX="206dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restAddressTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregaddress"
+                android:hint="@string/hotelAddressTV"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,9 +112,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restContactTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregno"
+                android:hint="@string/hotelContactTV"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,9 +131,10 @@
             tools:layout_editor_absoluteY="435dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restLocationTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregloaction"
+                android:hint="@string/hotelLocationTV"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,9 +150,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restUrlTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregurl"
+                android:hint="@string/hotelUrlTV"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -168,7 +163,7 @@
             android:layout_height="51dp"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/abeezee"
-            android:hint="@string/transregchoose"
+            android:hint="@string/hotelRefTV"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +177,7 @@
             android:layout_width="195dp"
             android:layout_height="41dp"
             android:layout_marginTop="8dp"
-            android:text="@string/choose"
+            android:text="@string/hotelImgChooseBtn"
             android:textColor="@color/black"
             app:backgroundTint="#e4e8e5"
             app:layout_constraintEnd_toEndOf="parent"
@@ -210,9 +205,10 @@
             app:layout_constraintTop_toBottomOf="@+id/restImgChooseBtn">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restUserNameTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregusername" />
+                android:hint="@string/hotelUserNameTV" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -226,9 +222,10 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/restPasswordTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/transregpassword" />
+                android:hint="@string/hotelPasswordTV" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -236,7 +233,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/transregcreate"
+            android:text="@string/hotelCreateBtn"
             app:backgroundTint="#61B303"
             app:cornerRadius="100sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -247,5 +244,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
 </ScrollView>
+
+
+
