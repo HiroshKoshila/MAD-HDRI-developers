@@ -32,6 +32,12 @@ public class BusinessRegistration extends AppCompatActivity {
         });
 
         Button button3=findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeActivityToShop();
+            }
+        });
 
         Button button4=findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +56,11 @@ public class BusinessRegistration extends AppCompatActivity {
     private void changeActivityToRestaurant(){
         Intent restaurantreg = new Intent(this,RestaurantRegistration.class);
         startActivity(restaurantreg);
+    }
+
+    private void changeActivityToShop(){
+        Intent shopreg = new Intent(this,ShopRegistration.class);
+        startActivity(shopreg);
     }
 
 

@@ -85,6 +85,18 @@
     <string name="restUserNameTV">Username</string>
     <string name="restPasswordTV">Password</string>
     <string name="restCreateBtn">Create Account</string>
+    <string name="shoptextview">Register Your Shop</string>
+    <string name="shopname_et">Name</string>
+    <string name="shopdesc_et">Description</string>
+    <string name="shopaddress_et">Address</string>
+    <string name="shopno_et">Contact Number</string>
+    <string name="shoploc_et">Location</string>
+    <string name="shopurl_et">Page URL (Optional)</string>
+    <string name="shopref_et">Upload references</string>
+    <string name="shopimage_choosebtn">Choose an image</string>
+    <string name="shopun_et">Username</string>
+    <string name="shoppwd_et">Password</string>
+    <string name="shop_createbtn">Create Account</string>
 
 
 </resources>
