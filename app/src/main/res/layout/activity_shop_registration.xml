@@ -189,7 +189,8 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:contentDescription="@string/choosedimage"
-            app:layout_constraintTop_toBottomOf="@+id/shopimage_choosebtn"/>
+            app:layout_constraintTop_toBottomOf="@+id/shopimage_choosebtn"
+            tools:ignore="ImageContrastCheck" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout7"
@@ -206,7 +207,8 @@
                 android:id="@+id/shopun_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/shopun_et" />
+                android:hint="@string/shopun_et"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout

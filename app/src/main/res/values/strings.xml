@@ -68,8 +68,9 @@
     <string name="hotelLocationTV">Location</string>
     <string name="hotelUrlTV">Page URL(Optional)</string>
     <string name="hotelRefTV">Upload references</string>
+    <string name="hotelImage">hotelProfileImage</string>
     <string name="hotelImgChooseBtn">Choose an image</string>
-    <string name="hotelUserNameTV">Username</string>
+    <string name="hotelEmailTV">Email</string>
     <string name="hotelPasswordTV">Password</string>
     <string name="hotelCreateBtn">Create Account</string>
 
@@ -82,9 +83,11 @@
     <string name="restUrlTV">Page URL(Optional)</string>
     <string name="restRefTV">Upload references</string>
     <string name="restImgChooseBtn">Choose an Image</string>
-    <string name="restUserNameTV">Username</string>
+    <string name="restUserNameTV">Email</string>
     <string name="restPasswordTV">Password</string>
     <string name="restCreateBtn">Create Account</string>
+
+
     <string name="shoptextview">Register Your Shop</string>
     <string name="shopname_et">Name</string>
     <string name="shopdesc_et">Description</string>
