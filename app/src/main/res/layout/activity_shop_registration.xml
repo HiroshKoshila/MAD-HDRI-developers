@@ -155,20 +155,18 @@
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/shopref_et"
-            android:layout_width="306dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/abeezee"
-            android:hint="@string/shopref_et"
-            android:textColor="@color/black"
-            android:textSize="30sp"
+        <ImageView
+            android:id="@+id/shop_image"
+            android:layout_width="81dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.361"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
-            tools:ignore="TextContrastCheck,TextContrastCheck" />
+            tools:srcCompat="@tools:sample/avatars" />
 
         <Button
             android:id="@+id/shopimage_choosebtn"
@@ -181,15 +179,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shopref_et"
+            app:layout_constraintTop_toBottomOf="@+id/shop_image"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <ImageView
-            android:id="@+id/choosedimage"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:contentDescription="@string/choosedimage"
-            app:layout_constraintTop_toBottomOf="@+id/shopimage_choosebtn"/>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout7"
