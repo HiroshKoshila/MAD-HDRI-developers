@@ -89,20 +89,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/userEdit3" />
 
-    <TextView
-        android:id="@+id/userPwd002"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/userPwd002"
-        android:textColor="#424141"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/userEdit4" />
-
-    <TextView
+        <TextView
         android:id="@+id/userDescription001"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -175,29 +162,15 @@
             app:layout_constraintTop_toBottomOf="@+id/userPwd001"
             tools:ignore="TouchTargetSizeCheck" />
 
-    <EditText
-        android:id="@+id/userEdit5"
-        android:layout_width="313dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/userEdit4"
-        android:inputType="textPassword"
-        android:textColorHint="#474444"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/userPwd002" />
-
-    <Button
-        android:id="@+id/userbtn002"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/userbtn002"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/userEdit5" />
+        <Button
+            android:id="@+id/userbtn002"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/userbtn002"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/userEdit4" />
 
         <ImageView
             android:id="@+id/imageView3"
