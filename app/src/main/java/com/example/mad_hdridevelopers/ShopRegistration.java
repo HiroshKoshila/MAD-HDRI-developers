@@ -13,7 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -52,8 +51,8 @@ public class ShopRegistration extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         image = (ImageView) findViewById(R.id.shop_image);
-        choose = (Button) findViewById(R.id.shopimage_choosebtn);
-        create = (Button) findViewById(R.id.shop_createbtn);
+        choose = (Button) findViewById(R.id.restImageChooseBtn);
+        create = (Button) findViewById(R.id.restCreateBtn);
 
         choose.setOnClickListener(new View.OnClickListener() {
 
@@ -119,14 +118,14 @@ public class ShopRegistration extends AppCompatActivity {
         dialog.setTitle("File Uploader");
         dialog.show();
 
-        name = (TextInputEditText) findViewById(R.id.shopname_et);
+        name = (TextInputEditText) findViewById(R.id.restNameTV);
         description = (TextInputEditText) findViewById(R.id.shopdesc_et);
-        address = (TextInputEditText) findViewById(R.id.shopaddress_et);
-        contactnumber = (TextInputEditText) findViewById(R.id.shopno_et);
-        location = (TextInputEditText) findViewById(R.id.shoploc_et);
-        pageurl = (TextInputEditText) findViewById(R.id.shopurl_et);
-        username = (TextInputEditText) findViewById(R.id.shopun_et);
-        password = (TextInputEditText) findViewById(R.id.shoppwd_et);
+        address = (TextInputEditText) findViewById(R.id.restAddressTV);
+        contactnumber = (TextInputEditText) findViewById(R.id.restContactTV);
+        location = (TextInputEditText) findViewById(R.id.restLocationTV);
+        pageurl = (TextInputEditText) findViewById(R.id.restUrlTV);
+        username = (TextInputEditText) findViewById(R.id.restEmailTV);
+        password = (TextInputEditText) findViewById(R.id.restPasswordTV);
 
 
         FirebaseStorage storage= FirebaseStorage.getInstance();
