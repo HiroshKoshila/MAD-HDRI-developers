@@ -26,7 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shopimage"
+        app:layout_constraintTop_toBottomOf="@+id/restImage1"
         app:srcCompat="@drawable/white"
         tools:ignore="ImageContrastCheck" />
 
@@ -49,7 +49,7 @@
         tools:ignore="TextContrastCheck" />
 
     <ImageView
-        android:id="@+id/shopimage"
+        android:id="@+id/restImage1"
         android:layout_width="180dp"
         android:layout_height="139dp"
         android:layout_marginTop="20dp"

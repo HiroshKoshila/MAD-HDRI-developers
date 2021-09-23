@@ -72,6 +72,8 @@
     <string name="hotelUserNameTV">Username</string>
     <string name="hotelPasswordTV">Password</string>
     <string name="hotelCreateBtn">Create Account</string>
+    <string name="hotelImage">hotelImage</string>
+    <string name="hotelEmailTV">Email</string>
 
     <string name="restRegTV1">Register Your Restaurant</string>
     <string name="restNameTV">Name</string>
@@ -80,11 +82,12 @@
     <string name="restContactTV">Contact Number</string>
     <string name="restLocationTV">Location</string>
     <string name="restUrlTV">Page URL(Optional)</string>
-    <string name="restRefTV">Upload references</string>
+    <string name="restImage">restImage</string>
     <string name="restImgChooseBtn">Choose an Image</string>
     <string name="restUserNameTV">Username</string>
     <string name="restPasswordTV">Password</string>
     <string name="restCreateBtn">Create Account</string>
+    <string name="restEmailTV">Email</string>
 
     <string name="shoptextview">Register Your Shop</string>
     <string name="shopname_et">Name</string>
@@ -98,8 +101,7 @@
     <string name="shopun_et">Useremail</string>
     <string name="shoppwd_et">Password</string>
     <string name="shop_createbtn">Create Account</string>
-    <string name="hotelImage">hotelImage</string>
-    <string name="hotelEmailTV">Email</string>
+
 
 
 </resources>
