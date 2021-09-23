@@ -98,6 +98,8 @@
     <string name="shopun_et">Useremail</string>
     <string name="shoppwd_et">Password</string>
     <string name="shop_createbtn">Create Account</string>
+    <string name="hotelImage">hotelImage</string>
+    <string name="hotelEmailTV">Email</string>
 
 
 </resources>
