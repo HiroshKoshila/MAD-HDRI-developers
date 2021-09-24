@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MADHDRIDevelopers">
         <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
             android:name=".RestaurantRegistration"
             android:exported="true" />
         <activity

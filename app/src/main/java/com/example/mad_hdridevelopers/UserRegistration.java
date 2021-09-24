@@ -174,15 +174,15 @@ public class UserRegistration extends AppCompatActivity {
 
                                 User obj=new User(
                                         name.getText().toString(),
+                                        description.getText().toString(),
                                         email.getText().toString(),
                                         password.getText().toString(),
-                                        description.getText().toString(),
                                         uri.toString());
                                 root.child(name.getText().toString()).setValue(obj);
 
                                 name.setText("");
-                                email.setText("");
                                 description.setText("");
+                                email.setText("");
                                 password.setText("");
                                 image.setImageResource(R.drawable.ic_launcher_background);
                                 Toast.makeText(getApplicationContext(),"uploaded",Toast.LENGTH_SHORT).show();
