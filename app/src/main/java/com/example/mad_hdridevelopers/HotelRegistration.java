@@ -17,8 +17,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -42,7 +46,8 @@ public class HotelRegistration extends AppCompatActivity {
     ImageView image;
     Button choose, signup;
     Bitmap bitmap;
-
+    //Authentication
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +123,7 @@ public class HotelRegistration extends AppCompatActivity {
         dialog.setTitle("File Uploader");
         dialog.show();
 
+
         name = (TextInputEditText) findViewById(R.id.hotelNameTV);
         description = (TextInputEditText) findViewById(R.id.hotelDescTV);
         address = (TextInputEditText) findViewById(R.id.hotelAddressTV);
@@ -127,6 +133,31 @@ public class HotelRegistration extends AppCompatActivity {
         email = (TextInputEditText) findViewById(R.id.hotelEmailTV);
         password = (TextInputEditText) findViewById(R.id.hotelPasswordTV);
 
+        //Authentication
+        String Email1= email.getText().toString();
+        String Password1=password.getText().toString();
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuth.createUserWithEmailAndPassword(Email1,Password1)
+                .addOnCompleteListener(HotelRegistration.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Registered Successfully!",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Process Error!",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
+        //normal process
 
         FirebaseStorage storage= FirebaseStorage.getInstance();
         StorageReference uploader = storage.getReference("Hotel1"+new Random().nextInt(50));
