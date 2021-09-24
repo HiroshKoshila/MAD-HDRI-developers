@@ -40,7 +40,7 @@
     <string name="transregurl">Page URL(Optional)</string>
     <string name="transregchoose">Upload references</string>
     <string name="choosedimage">Choosed image</string>
-    <string name="transregusername">Username</string>
+    <string name="transregusername">Email</string>
     <string name="choose">Choose an image</string>
     <string name="transregpassword">Password</string>
     <string name="transregcreate">Create Account</string>

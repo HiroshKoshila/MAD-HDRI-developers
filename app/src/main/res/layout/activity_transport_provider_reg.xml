@@ -13,21 +13,8 @@
         android:layout_height="wrap_content"
         android:contentDescription="@string/transportReg">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar10"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="#a1cc03"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:title="iTourSL"
-            app:titleMarginStart="90dp"
-            app:titleTextColor="@color/white" />
-
         <ImageView
-            android:id="@+id/restImage1"
+            android:id="@+id/transImage1"
             android:layout_width="420dp"
             android:layout_height="143dp"
             android:layout_marginTop="4dp"
@@ -36,10 +23,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar10" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/restRegTV1"
+            android:id="@+id/transRegTV1"
             android:layout_width="122dp"
             android:layout_height="38dp"
             android:fontFamily="@font/abeezee"
@@ -51,7 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/restImage1" />
+            app:layout_constraintTop_toTopOf="@+id/transImage1" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -60,9 +47,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/restImage1">
+            app:layout_constraintTop_toBottomOf="@+id/transImage1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/registername"
@@ -83,6 +71,7 @@
 
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -102,6 +91,7 @@
             tools:layout_editor_absoluteX="206dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregaddress"
@@ -120,6 +110,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregno"
@@ -138,6 +129,7 @@
             tools:layout_editor_absoluteY="435dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregloaction"
@@ -156,29 +148,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregurl"
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/shopref_et"
-            android:layout_width="306dp"
-            android:layout_height="51dp"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/abeezee"
-            android:hint="@string/transregchoose"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.361"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
-            tools:ignore="TextContrastCheck,TextContrastCheck" />
 
         <Button
-            android:id="@+id/restImageChooseBtn"
+            android:id="@+id/transchoosebtn"
             android:layout_width="195dp"
             android:layout_height="41dp"
             android:layout_marginTop="8dp"
@@ -188,15 +167,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.175"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shopref_et"
+            app:layout_constraintTop_toBottomOf="@+id/choosedimagetrans"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView
-            android:id="@+id/choosedimage"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:contentDescription="@string/choosedimage"
-            app:layout_constraintTop_toBottomOf="@+id/restImageChooseBtn"/>
+            android:id="@+id/choosedimagetrans"
+            android:layout_width="81dp"
+            android:layout_height="81dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout7"
@@ -207,9 +193,10 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/restImageChooseBtn">
+            app:layout_constraintTop_toBottomOf="@+id/transchoosebtn">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregusername" />
@@ -226,13 +213,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/trans_reg_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/transregpassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/restCreateBtn"
+            android:id="@+id/transCreateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
