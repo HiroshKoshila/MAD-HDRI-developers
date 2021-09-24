@@ -53,12 +53,12 @@ public class ShopRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_registration);
 
-        getSupportActionBar().setTitle("User Registration");
+        getSupportActionBar().setTitle("Shop Registration");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         image = (ImageView) findViewById(R.id.shop_image);
-        choose = (Button) findViewById(R.id.restImageChooseBtn);
-        create = (Button) findViewById(R.id.restCreateBtn);
+        choose = (Button) findViewById(R.id.shopimage_choosebtn);
+        create = (Button) findViewById(R.id.shop_createbtn);
 
         choose.setOnClickListener(new View.OnClickListener() {
 
@@ -124,22 +124,22 @@ public class ShopRegistration extends AppCompatActivity {
         dialog.setTitle("File Uploader");
         dialog.show();
 
-        name = (TextInputEditText) findViewById(R.id.restNameTV);
+        name = (TextInputEditText) findViewById(R.id.shopname_et);
         description = (TextInputEditText) findViewById(R.id.shopdesc_et);
-        address = (TextInputEditText) findViewById(R.id.restAddressTV);
-        contactnumber = (TextInputEditText) findViewById(R.id.restContactTV);
-        location = (TextInputEditText) findViewById(R.id.restLocationTV);
-        pageurl = (TextInputEditText) findViewById(R.id.restUrlTV);
-        email = (TextInputEditText) findViewById(R.id.restEmailTV);
-        password = (TextInputEditText) findViewById(R.id.restPasswordTV);
+        address = (TextInputEditText) findViewById(R.id.shopaddress_et);
+        contactnumber = (TextInputEditText) findViewById(R.id.shopno_et);
+        location = (TextInputEditText) findViewById(R.id.shoploc_et);
+        pageurl = (TextInputEditText) findViewById(R.id.shopurl_et);
+        email = (TextInputEditText) findViewById(R.id.shopue_et);
+        password = (TextInputEditText) findViewById(R.id.shoppwd_et);
 
         //Authentication
-        String Email3= email.getText().toString();
-        String Password3=password.getText().toString();
+        String Email4= email.getText().toString();
+        String Password4=password.getText().toString();
 
         mAuth = FirebaseAuth.getInstance();
 
-        mAuth.createUserWithEmailAndPassword(Email3,Password3)
+        mAuth.createUserWithEmailAndPassword(Email4,Password4)
                 .addOnCompleteListener(ShopRegistration.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
