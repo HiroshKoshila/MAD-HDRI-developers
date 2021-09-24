@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".Weather">
+    android:contentDescription="@string/weatherbg"
+    tools:context=".WeatherScreen1">
 
     <ImageView
         android:id="@+id/weatherIcon"
@@ -23,14 +24,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="384dp"
-        android:layout_height="151dp"
+        android:layout_width="402dp"
+        android:layout_height="174dp"
+        android:layout_above="@+id/cityFinder"
         android:contentDescription="@string/weatherLlayout"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weatherIcon"
-        android:layout_above="@+id/cityFinder">
+        app:layout_constraintTop_toBottomOf="@+id/weatherIcon">
 
         <TextView
             android:id="@+id/temperature"
@@ -58,7 +59,7 @@
         <TextView
             android:id="@+id/cityName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:paddingStart="30sp"
             android:paddingLeft="30sp"
             android:text="@string/weathertxt3"
@@ -79,8 +80,10 @@
         android:background="#61B303"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.213">
 
         <TextView
             android:layout_width="wrap_content"
@@ -90,21 +93,20 @@
             android:textColor="#ffffff"
             android:textSize="16sp" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="1dp"
-            app:itemBackground="@color/apple_green100"
-            app:itemIconSize="@dimen/bottom_navigation_icon_size"
-            app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/menu" />
-
     </RelativeLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:itemBackground="@color/apple_green100"
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

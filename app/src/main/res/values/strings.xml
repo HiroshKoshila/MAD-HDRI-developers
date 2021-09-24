@@ -102,5 +102,19 @@
     <string name="shoppwd_et">Password</string>
     <string name="shop_createbtn">Create Account</string>
 
+    <string name="weatherlayout">Weather layout</string>
+    <string name="weatherbg">Weatherbg</string>
+    <string name="weatherfind">WeatherFind</string>
+    <string name="weatherLlayout">Weatherlayout</string>
+    <string name="weathertxt1">0*C</string>
+    <string name="weathertxt2">-------</string>
+    <string name="weathertxt3">Loading....</string>
+    <string name="weathertxt4">Search for Location</string>
+    <string name="weathertxt5">Weather Forecast</string>
+    <string name="weathertxt6">Enter City Name</string>
+    <string name="weatherimg">back</string>
+    <string name="weatherimgicons">weather icons</string>
+
+
 
 </resources>
