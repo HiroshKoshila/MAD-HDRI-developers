@@ -16,8 +16,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -41,6 +45,8 @@ public class RestaurantRegistration extends AppCompatActivity {
     ImageView image;
     Button choose, signup;
     Bitmap bitmap;
+    //Authentication
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +132,32 @@ public class RestaurantRegistration extends AppCompatActivity {
         password = (TextInputEditText) findViewById(R.id.restPasswordTV);
 
 
+        //Authentication
+        String Email2= email.getText().toString();
+        String Password2=password.getText().toString();
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuth.createUserWithEmailAndPassword(Email2,Password2)
+                .addOnCompleteListener(RestaurantRegistration.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Registered Successfully!",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Process Error!",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
+
+    //normal process
         FirebaseStorage storage= FirebaseStorage.getInstance();
         StorageReference uploader = storage.getReference("Restaurant1"+new Random().nextInt(50));
 
