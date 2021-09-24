@@ -12,20 +12,20 @@
         tools:context=".ShopRegistration">
 
         <ImageView
-            android:id="@+id/restImage1"
+            android:id="@+id/shopimage"
             android:layout_width="420dp"
             android:layout_height="143dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="4dp"
             android:contentDescription="@string/registerimage"
             android:src="@drawable/registerimage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.555"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ImageContrastCheck" />
 
         <TextView
-            android:id="@+id/restRegTV1"
+            android:id="@+id/shoptextview"
             android:layout_width="wrap_content"
             android:layout_height="41dp"
             android:layout_marginTop="4dp"
@@ -38,7 +38,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/restImage1" />
+            app:layout_constraintTop_toTopOf="@+id/shopimage" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -47,10 +47,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/restImage1">
+            app:layout_constraintTop_toBottomOf="@+id/shopimage">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restNameTV"
+                android:id="@+id/shopname_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shopname_et"
@@ -91,7 +91,7 @@
             tools:layout_editor_absoluteX="206dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restAddressTV"
+                android:id="@+id/shopaddress_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shopaddress_et"
@@ -110,7 +110,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restContactTV"
+                android:id="@+id/shopno_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shopno_et"
@@ -129,7 +129,7 @@
             tools:layout_editor_absoluteY="435dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restLocationTV"
+                android:id="@+id/shoploc_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shoploc_et"
@@ -148,7 +148,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restUrlTV"
+                android:id="@+id/shopurl_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shopurl_et"
@@ -162,6 +162,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/shop_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -170,7 +171,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <Button
-            android:id="@+id/restImageChooseBtn"
+            android:id="@+id/shopimage_choosebtn"
             android:layout_width="195dp"
             android:layout_height="41dp"
             android:layout_marginTop="8dp"
@@ -194,13 +195,13 @@
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/restImageChooseBtn">
+            app:layout_constraintTop_toBottomOf="@+id/shopimage_choosebtn">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restEmailTV"
+                android:id="@+id/shopue_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/shopun_et" />
+                android:hint="@string/shopue_et" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -214,14 +215,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/restPasswordTV"
+                android:id="@+id/shoppwd_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/shoppwd_et" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/restCreateBtn"
+            android:id="@+id/shop_createbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
