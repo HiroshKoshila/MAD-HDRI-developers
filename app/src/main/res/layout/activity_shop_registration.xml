@@ -200,7 +200,7 @@
                 android:id="@+id/restEmailTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/restEmailTV" />
+                android:hint="@string/shopun_et" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
