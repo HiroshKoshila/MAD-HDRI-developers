@@ -17,7 +17,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -41,6 +45,8 @@ public class UserRegistration extends AppCompatActivity {
     ImageView image;
     Button choose,signup;
     Bitmap bitmap;
+    //Authentication
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,11 +128,35 @@ public class UserRegistration extends AppCompatActivity {
         dialog.show();
 
         name = (EditText) findViewById(R.id.userEdit1);
-        email = (EditText) findViewById(R.id.userEdit3);
         description = (EditText) findViewById(R.id.userEdit2);
+        email = (EditText) findViewById(R.id.userEdit3);
         password = (EditText) findViewById(R.id.userEdit4);
 
+        //Authentication
+        String Email= email.getText().toString();
+        String Password=password.getText().toString();
 
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuth.createUserWithEmailAndPassword(Email,Password)
+                .addOnCompleteListener(UserRegistration.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Registered Successfully!",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Process Error!",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+
+
+        //normal process
         FirebaseStorage storage= FirebaseStorage.getInstance();
         StorageReference uploader = storage.getReference("Image1"+new Random().nextInt(50));
 
