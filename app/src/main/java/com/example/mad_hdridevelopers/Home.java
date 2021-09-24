@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.weather:
-                        startActivity(new Intent(getApplicationContext(), Weather.class));
+                        startActivity(new Intent(getApplicationContext(), WeatherScreen1.class));
                         overridePendingTransition(0,0);
                         return true;
 
