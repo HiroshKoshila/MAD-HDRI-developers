@@ -53,7 +53,6 @@ public class RestaurantRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurant_registration);
 
-        getSupportActionBar().setTitle("Restaurant Registration");
 
         image = (ImageView) findViewById(R.id.restImage);
         choose = (Button) findViewById(R.id.restImageChooseBtn);

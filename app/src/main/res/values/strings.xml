@@ -1,4 +1,10 @@
 <resources>
+
+    //for navigation
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+
     <string name="app_name">MAD-HDRI Developers</string>
     <string name="topic001">iTourSL</string>
     <string name="title001">iTourSL</string>
@@ -114,7 +120,12 @@
     <string name="weathertxt6">Enter City Name</string>
     <string name="weatherimg">back</string>
     <string name="weatherimgicons">weather icons</string>
-
+    <string name="home">Home</string>
+    <string name="cal">Budget Cal</string>
+    <string name="Travel">Travel Planner</string>
+    <string name="your_profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="itoursl">iTourSL</string>
 
 
 </resources>

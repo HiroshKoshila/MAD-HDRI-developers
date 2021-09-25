@@ -49,8 +49,6 @@ public class TransportProviderReg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport_provider_reg);
 
-        getSupportActionBar().setTitle("Transport Registration");
-
         image = (ImageView) findViewById(R.id.choosedimagetrans);
         signup = (Button) findViewById(R.id.transCreateBtn);
         choose = (Button) findViewById(R.id.transchoosebtn);

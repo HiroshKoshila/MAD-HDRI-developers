@@ -53,8 +53,6 @@ public class UserRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
 
-        getSupportActionBar().setTitle("User Registration");
-
         image = (ImageView) findViewById(R.id.imageView3);
         signup = (Button) findViewById(R.id.userbtn002);
         choose = (Button) findViewById(R.id.userbtn001);
