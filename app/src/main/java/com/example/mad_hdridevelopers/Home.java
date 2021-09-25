@@ -37,11 +37,19 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         //Buttons
 
         Button map = findViewById(R.id.home_map);
+        Button transport = findViewById(R.id.home_vehicle);
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent mapView = new Intent(Home.this, CurrentLocation.class);
+                startActivity(mapView);
+            }
+        });
+        transport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapView = new Intent(Home.this, TransportView.class);
                 startActivity(mapView);
             }
         });

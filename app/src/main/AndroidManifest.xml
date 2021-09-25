@@ -50,6 +50,7 @@
             android:name=".BudgetCal1"
             android:exported="true" />
         <activity android:name=".TransportProviderReg" />
+        <activity android:name=".TransportView" />
         <activity android:name=".UserRegistration" />
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
