@@ -142,6 +142,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent2);
                 Toast.makeText(this,"Cal",Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_user:
+                Intent intent3 = new Intent(Home.this,UserProfile.class);
+                startActivity(intent3);
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
