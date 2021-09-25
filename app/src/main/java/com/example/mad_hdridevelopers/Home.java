@@ -22,6 +22,7 @@ import java.util.Map;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    //side Nav
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
@@ -75,6 +76,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 .replace(R.id.mapLayout,fragment)
                 .commit();
 
+
+        //side nav
+
         drawerLayout = findViewById(R.id.drawer_layout);//need to be changed
         navigationView = findViewById(R.id.nav_view);
 
@@ -92,8 +96,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         //click on nav
         navigationView.setNavigationItemSelectedListener(this);
-
+        //selected icon
         navigationView.setCheckedItem(R.id.nav_home);
+
+
+
 
 
         //bottom navigation
