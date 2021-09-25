@@ -65,7 +65,7 @@ public class BusinessRegistration extends AppCompatActivity {
 
 
     private void changeActivity(){
-        Intent transreg = new Intent(this,TransportView.class);
+        Intent transreg = new Intent(this,TransportProviderReg.class);
         startActivity(transreg);
     }
 }
