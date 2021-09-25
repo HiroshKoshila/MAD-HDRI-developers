@@ -14,7 +14,6 @@ public class SignupOption extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_option);
 
-        getSupportActionBar().hide();
 
         Button wel2btn5=findViewById(R.id.wel2btn5);
         Button user =findViewById(R.id.wel2btn4);

@@ -13,7 +13,7 @@ public class BusinessRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_registration);
-        getSupportActionBar().hide();
+
 
         Button button1=findViewById(R.id.button);
         button1.setOnClickListener(new View.OnClickListener() {

@@ -15,7 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().hide();
 
         Button signup = findViewById(R.id.wbtn2);
         Button login = findViewById(R.id.wbtn1);

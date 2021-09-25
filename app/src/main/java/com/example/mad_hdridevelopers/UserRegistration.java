@@ -54,7 +54,6 @@ public class UserRegistration extends AppCompatActivity {
         setContentView(R.layout.activity_user_registration);
 
         getSupportActionBar().setTitle("User Registration");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         image = (ImageView) findViewById(R.id.imageView3);
         signup = (Button) findViewById(R.id.userbtn002);

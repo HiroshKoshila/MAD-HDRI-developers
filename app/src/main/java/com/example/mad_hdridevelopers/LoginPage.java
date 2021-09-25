@@ -26,7 +26,7 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
-        getSupportActionBar().hide();
+
         login = (Button)findViewById(R.id.loginbtn001);
         name = (EditText) findViewById(R.id.logedit1);
         pass = (EditText) findViewById(R.id.logedit2);
