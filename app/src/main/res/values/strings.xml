@@ -140,5 +140,15 @@
     <string name="procontact">provider description</string>
     <string name="proemail">provider email</string>
     <string name="proabout">About</string>
+    <string name="user_name">Sanjula Perera</string>
+    <string name="user_desc">"crickter* Traveller* "</string>
+    <string name="user_btn1">Edit profile</string>
+    <string name="user_btn2">upload photos</string>
+    <string name="iu_txt1">select image</string>
+    <string name="iu_txt2">Description</string>
+    <string name="iu_txt3">Location</string>
+    <string name="location">location</string>
+    <string name="iu_text002">description</string>
+    <string name="iu_button">upload photo</string>
 
 </resources>
