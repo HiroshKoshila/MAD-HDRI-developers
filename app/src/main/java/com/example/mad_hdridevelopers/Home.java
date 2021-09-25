@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,6 +29,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        //map part
+        Fragment fragment = new MapFragment();
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.mapLayout,fragment)
+                .commit();
 
         drawerLayout = findViewById(R.id.drawer_layout);//need to be changed
         navigationView = findViewById(R.id.nav_view);

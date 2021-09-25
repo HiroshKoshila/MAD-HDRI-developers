@@ -126,6 +126,11 @@
     <string name="your_profile">Profile</string>
     <string name="logout">Logout</string>
     <string name="itoursl">iTourSL</string>
+    <string name="home_hotels">hotels</string>
+    <string name="home_rest">restaurants</string>
+    <string name="home_vehicle">vehicles</string>
+    <string name="home_shops">shops</string>
+    <string name="home_map">map</string>
 
     <string name="rimage">recyclerimage</string>
     <string name="proname">provider name</string>
