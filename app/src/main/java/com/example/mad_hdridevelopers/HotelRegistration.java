@@ -55,7 +55,7 @@ public class HotelRegistration extends AppCompatActivity {
         setContentView(R.layout.activity_hotel_registration);
 
         getSupportActionBar().setTitle("Hotel Registration");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         image = (ImageView) findViewById(R.id.hotelImage);
         choose = (Button) findViewById(R.id.hotelImgChooseBtn);
