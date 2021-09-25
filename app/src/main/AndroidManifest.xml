@@ -43,8 +43,7 @@
             android:exported="true" />
         <activity android:name=".TransportProviderReg" />
         <activity
-            android:name=".UserRegistration"
-             />
+            android:name=".UserRegistration"/>
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignupOption" />

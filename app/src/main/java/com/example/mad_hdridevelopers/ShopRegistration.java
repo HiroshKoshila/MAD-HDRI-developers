@@ -53,8 +53,6 @@ public class ShopRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_registration);
 
-        getSupportActionBar().setTitle("Shop Registration");
-
 
         image = (ImageView) findViewById(R.id.shop_image);
         choose = (Button) findViewById(R.id.shopimage_choosebtn);
