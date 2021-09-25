@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mad_hdridevelopers">
+    package="com.example.mad_hdridevelopers" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -13,7 +13,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MADHDRIDevelopers">
+        android:theme="@style/Theme.MADHDRIDevelopers" >
+        <activity
+            android:name=".TransportView"
+            android:exported="true" />
         <activity
             android:name=".WeatherScreen2"
             android:exported="true" />
@@ -47,7 +50,7 @@
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />
         <activity android:name=".SignupOption" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

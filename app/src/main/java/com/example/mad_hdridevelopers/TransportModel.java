@@ -1,9 +1,12 @@
 package com.example.mad_hdridevelopers;
 
-public class TransportProvider {
-    String name,description,address,contactno,location,url,email,password,image;
+public class TransportModel {
+    String name,description,address,contactno,location,url,email,image;
+    TransportModel(){
 
-    public TransportProvider(String name, String description, String address, String contactno, String location, String url, String email, String password, String image) {
+    }
+
+    public TransportModel(String name, String description, String address, String contactno, String location, String url, String email, String image) {
         this.name = name;
         this.description = description;
         this.address = address;
@@ -11,7 +14,6 @@ public class TransportProvider {
         this.location = location;
         this.url = url;
         this.email = email;
-        this.password = password;
         this.image = image;
     }
 
@@ -68,14 +70,7 @@ public class TransportProvider {
 
     public void setEmail(String email) {
         this.email = email;
-    }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getImage() {
@@ -85,5 +80,6 @@ public class TransportProvider {
     public void setImage(String image) {
         this.image = image;
     }
+
 }
 

@@ -32,9 +32,13 @@
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_restaurant_registration.xml" value="0.12001811594202899" />
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_shop_registration.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_transport_provider_reg.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_transport_view.xml" value="0.1" />
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_weather.xml" value="0.11367753623188406" />
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_weather_screen1.xml" value="0.12001811594202899" />
         <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/activity_weather_screen2.xml" value="0.12001811594202899" />
+        <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/fragment_descfragment.xml" value="0.1" />
+        <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/fragment_recfragment.xml" value="0.1" />
+        <entry key="..\:/Users/DINITHI/AndroidStudioProjects/MAD-HDRI-developers/app/src/main/res/layout/transport_item.xml" value="0.1" />
       </map>
     </option>
   </component>

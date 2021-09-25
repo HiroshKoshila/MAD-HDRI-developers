@@ -127,5 +127,13 @@
     <string name="logout">Logout</string>
     <string name="itoursl">iTourSL</string>
 
+    <string name="rimage">recyclerimage</string>
+    <string name="proname">provider name</string>
+    <string name="prodesc">provider description</string>
+    <string name="proadd">provider address</string>
+    <string name="prolocation">provider location</string>
+    <string name="procontact">provider description</string>
+    <string name="proemail">provider email</string>
+    <string name="proabout">About</string>
 
 </resources>
