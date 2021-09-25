@@ -151,4 +151,19 @@
     <string name="iu_text002">description</string>
     <string name="iu_button">upload photo</string>
 
+    <string name="shopr_image">"shop recycler image "</string>
+    <string name="shopr_name">Shop Name</string>
+    <string name="shopr_desc">Shop Description</string>
+    <string name="shopr_loc">Shop Location</string>
+    <string name="shopr_no">Contact no</string>
+    <string name="shopnameholder">Shop Name</string>
+    <string name="shopaddressholder">Shop Address</string>
+    <string name="Shopemailholder">Shop email</string>
+    <string name="shopcontactholder">Shop description</string>
+    <string name="shoplocationholder">Shop location</string>
+    <string name="aboutshop">About</string>
+    <string name="shopdescholder">Description of Shop and the Product</string>
+    <string name="shopemailholder">Shop email</string>
+
+
 </resources>
