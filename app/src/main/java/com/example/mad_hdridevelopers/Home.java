@@ -38,6 +38,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         Button map = findViewById(R.id.home_map);
         Button transport = findViewById(R.id.home_vehicle);
+        Button shop = findViewById(R.id.home_shops);
 
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +54,15 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(mapView);
             }
         });
+
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapView = new Intent(Home.this, ShopView.class);
+                startActivity(mapView);
+            }
+        });
+
 
 
 

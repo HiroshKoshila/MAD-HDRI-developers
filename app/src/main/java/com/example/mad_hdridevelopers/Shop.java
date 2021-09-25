@@ -4,6 +4,10 @@ public class Shop {
 
     String s_name, s_description, s_address, s_contactno, s_location, s_pageurl, s_image, s_username, s_password;
 
+    public Shop(){
+
+    }
+
     public Shop(String s_name, String s_description, String s_address, String s_contactno, String s_location, String s_pageurl, String s_image, String s_username, String s_password) {
         this.s_name = s_name;
         this.s_description = s_description;
