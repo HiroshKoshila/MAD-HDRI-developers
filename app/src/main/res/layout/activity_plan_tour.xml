@@ -58,11 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:clickable="true"
-
-
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/ic_launcher_plus"
             app:backgroundTint="@android:color/holo_green_light"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="VectorDrawableCompat" />

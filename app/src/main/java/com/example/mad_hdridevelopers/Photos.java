@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,6 +34,8 @@ public class Photos extends AppCompatActivity implements NavigationView.OnNaviga
     NavigationView navigationView;
     Toolbar toolbar;
 
+    //to logout
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();
 
     BottomNavigationView bottomNavigationView;
 
@@ -177,13 +180,18 @@ public class Photos extends AppCompatActivity implements NavigationView.OnNaviga
                 startActivity(intent1);
                 break;
             case R.id.nav_cal:
-                Intent intent2 = new Intent(Photos.this,BudgetCal1.class);
+                Intent intent2 = new Intent(Photos.this,BudgetCal.class);
                 startActivity(intent2);
                 Toast.makeText(this,"Cal",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_user:
                 Intent intent4 = new Intent(Photos.this,UserProfile.class);
                 startActivity(intent4);
+                break;
+            case R.id.nav_logout:
+                mAuth.signOut();
+                Intent signOut = new Intent(Photos.this,LoginPage.class);
+                startActivity(signOut);
                 break;
         }
 
