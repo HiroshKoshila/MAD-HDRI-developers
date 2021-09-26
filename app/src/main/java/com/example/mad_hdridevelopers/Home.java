@@ -33,6 +33,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //toolbar
+        toolbar =findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("iTourSL");
+
+
         //Buttons
 
         Button map = findViewById(R.id.home_map);
@@ -80,10 +86,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         drawerLayout = findViewById(R.id.drawer_layout);//need to be changed
         navigationView = findViewById(R.id.nav_view);
 
-        //toolbar
-        toolbar =findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("iTourSL");
+
 
         //navigate menu
 
@@ -147,6 +150,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         switch (item.getItemId()){
             case R.id.nav_home:
+
                 break;
             case R.id.nav_trans:
                 Intent intent1 = new Intent(Home.this,PlanTour.class);
@@ -155,16 +159,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_cal:
                 Intent intent2 = new Intent(Home.this,BudgetCal1.class);
                 startActivity(intent2);
-                Toast.makeText(this,"Cal",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_user:
-                Intent intent3 = new Intent(Home.this,UserProfile.class);
-                startActivity(intent3);
+                Intent intent4 = new Intent(Home.this,UserProfile.class);
+                startActivity(intent4);
                 break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
-
         return true;
     }
 
