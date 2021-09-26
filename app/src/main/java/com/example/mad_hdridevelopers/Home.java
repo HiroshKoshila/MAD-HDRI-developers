@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
 
@@ -27,6 +28,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     NavigationView navigationView;
     Toolbar toolbar;
 
+    //to logout
+    FirebaseAuth mAuth=FirebaseAuth.getInstance();
+
 
     BottomNavigationView bottomNavigationView;
 
@@ -34,6 +38,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
 
         //toolbar
         toolbar =findViewById(R.id.toolbar);
@@ -180,6 +185,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_user:
                 Intent intent4 = new Intent(Home.this,UserProfile.class);
                 startActivity(intent4);
+                break;
+            case R.id.nav_logout:
+                mAuth.signOut();
+                Intent signOut = new Intent(Home.this,LoginPage.class);
+                startActivity(signOut);
                 break;
         }
 

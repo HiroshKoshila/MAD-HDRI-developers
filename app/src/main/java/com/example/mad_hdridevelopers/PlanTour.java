@@ -166,6 +166,10 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
                 Intent intent4 = new Intent(PlanTour.this,UserProfile.class);
                 startActivity(intent4);
                 break;
+            case R.id.nav_logout:
+                Intent signOut = new Intent(PlanTour.this,LoginPage.class);
+                startActivity(signOut);
+                break;
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
