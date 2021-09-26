@@ -38,6 +38,8 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import java.io.InputStream;
 import java.util.Random;
 
+import kotlin.time.ExperimentalTime;
+
 public class UserRegistration extends AppCompatActivity {
 
     EditText name,description,email,password;
@@ -52,6 +54,12 @@ public class UserRegistration extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_registration);
+
+        name = (EditText) findViewById(R.id.userEdit1);
+        description = (EditText) findViewById(R.id.userEdit2);
+        email = (EditText) findViewById(R.id.userEdit3);
+        password = (EditText) findViewById(R.id.userEdit4);
+
 
         image = (ImageView) findViewById(R.id.imageView3);
         signup = (Button) findViewById(R.id.userbtn002);
@@ -87,8 +95,27 @@ public class UserRegistration extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadtofirebase();
-                navigateToLogin();
+
+                if(name.length() == 0 ){
+                    name.setError("Enter your name!");
+                }
+                else if(description.length()==0){
+                    description.setError("Enter Description!");
+                }
+                else if(email.length()==0){
+                    email.setError("Enter Email Correctly!");
+                }
+                else if(password.length()==0){
+                    password.setError("Enter Password!");
+                }
+                else if(password.length()<6){
+                    password.setError("Your password must contain more than 6 digits!");
+                }
+                else{
+                    uploadtofirebase();
+                    navigateToLogin();
+                }
+
             }
         });
 
