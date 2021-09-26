@@ -11,6 +11,11 @@ public class Hotel {
     private String hotelUsername;
     private String hotelPassword;
 
+
+    public Hotel() {
+
+    }
+
     public Hotel(String hotelName, String hotelDescription, String hotelAddress, String hotelContactNo, String hotelLocation, String hotelUrl, String hotelImage, String hotelUsername, String hotelPassword) {
         this.hotelName = hotelName;
         this.hotelDescription = hotelDescription;

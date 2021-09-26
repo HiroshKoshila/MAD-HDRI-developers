@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.Objects;
+
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //side Nav
@@ -36,13 +38,14 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         //toolbar
         toolbar =findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("iTourSL");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("iTourSL");
 
 
         //Buttons
 
         Button map = findViewById(R.id.home_map);
         Button transport = findViewById(R.id.home_vehicle);
+        Button hotel = findViewById(R.id.home_hotels);
         Button shop = findViewById(R.id.home_shops);
         Button restaurant = findViewById(R.id.home_rest);
 
@@ -76,6 +79,13 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             }
         });
 
+        hotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapView = new Intent(Home.this, HotelView.class);
+                startActivity(mapView);
+            }
+        });
 
 
 
