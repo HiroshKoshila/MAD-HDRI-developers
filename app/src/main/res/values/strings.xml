@@ -181,4 +181,13 @@
     <string name="cdesc">Kandy is home to sacred landmarks,landscaped gardens and cultural museums.</string>
     <string name="temprelic">Temple of tooth relic</string>
     <string name="kview">Kandy view point</string>
+
+    <string name="restimage">recyclerimage</string>
+    <string name="restname">provider name</string>
+    <string name="restaurantdesc">restaurant description</string>
+    <string name="restaurantaddress">restaurant address</string>
+    <string name="restaurantlocation">restaurant location</string>
+    <string name="restaurantcontact">restaurant contact</string>
+    <string name="restaurantemail">restaurant email</string>
+    <string name="restaurantabout">About</string>
 </resources>
