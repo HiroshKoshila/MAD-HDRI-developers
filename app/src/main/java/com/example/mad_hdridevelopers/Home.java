@@ -168,7 +168,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
         switch (item.getItemId()){
             case R.id.nav_home:
-
                 break;
             case R.id.nav_trans:
                 Intent intent1 = new Intent(Home.this,PlanTour.class);
