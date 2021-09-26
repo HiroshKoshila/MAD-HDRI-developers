@@ -10,5 +10,6 @@
     <color name="background">#BFD5B5</color>
     <color name="ActionBar">#A1CC03</color>
     <color name="apple_green100">#A1CC03</color>
+    <color name="hint_text">#FF9E9E9E</color>
 
 </resources>

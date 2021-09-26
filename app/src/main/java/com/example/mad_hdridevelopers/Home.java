@@ -175,7 +175,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 startActivity(intent1);
                 break;
             case R.id.nav_cal:
-                Intent intent2 = new Intent(Home.this,BudgetCal1.class);
+                Intent intent2 = new Intent(Home.this,BudgetCal.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_user:

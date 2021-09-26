@@ -203,4 +203,15 @@
     <string name="hotelrecydesc">Rest Desc</string>
     <string name="hotelrecylocation">Rest Location</string>
     <string name="hotelrecycontactno">Rest ContactNo</string>
+
+    <string-array name="items">
+        <item> Select Item </item>
+        <item> Food and Beverages </item>
+        <item> Transportation </item>
+        <item> Vehicle </item>
+        <item> Accomodation </item>
+        <item> Others </item>
+    </string-array>
+
+
 </resources>
