@@ -137,7 +137,7 @@
     <string name="prodesc">provider description</string>
     <string name="proadd">provider address</string>
     <string name="prolocation">provider location</string>
-    <string name="procontact">provider description</string>
+    <string name="procontact">provider contact</string>
     <string name="proemail">provider email</string>
     <string name="proabout">About</string>
     <string name="user_name">Sanjula Perera</string>
@@ -166,4 +166,9 @@
     <string name="shopemailholder">Shop email</string>
 
 
+    <string name="kandy">Kandy</string>
+    <string name="neardest">Near by destinations</string>
+    <string name="cdesc">Kandy is home to sacred landmarks,landscaped gardens and cultural museums.</string>
+    <string name="temprelic">Temple of tooth relic</string>
+    <string name="kview">Kandy view point</string>
 </resources>

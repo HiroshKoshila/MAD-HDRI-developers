@@ -22,6 +22,9 @@
             android:name=".UserProfile"
             android:exported="true" />
         <activity
+            android:name=".CityOverview"
+            android:exported="true" />
+        <activity
             android:name=".CurrentLocation"
             android:exported="true" />
 
