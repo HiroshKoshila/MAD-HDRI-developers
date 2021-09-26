@@ -173,7 +173,7 @@ public class Photos extends AppCompatActivity implements NavigationView.OnNaviga
                 startActivity(intent3);
                 break;
             case R.id.nav_trans:
-                Intent intent1 = new Intent(Photos.this,Photos.class);
+                Intent intent1 = new Intent(Photos.this,PlanTour.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_cal:

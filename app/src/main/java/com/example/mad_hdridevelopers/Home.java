@@ -18,8 +18,6 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.Map;
-
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //side Nav
@@ -151,7 +149,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             case R.id.nav_home:
                 break;
             case R.id.nav_trans:
-                Intent intent1 = new Intent(Home.this,Photos.class);
+                Intent intent1 = new Intent(Home.this,PlanTour.class);
                 startActivity(intent1);
                 break;
             case R.id.nav_cal:

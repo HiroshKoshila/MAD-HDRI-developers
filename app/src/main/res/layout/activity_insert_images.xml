@@ -8,7 +8,7 @@
     tools:context=".InsertImages">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/plantoolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/apple_green100"
@@ -27,7 +27,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/plantoolbar"
         app:srcCompat="@drawable/white3" />
 
     <TextView
@@ -41,7 +41,7 @@
         android:textColor="#070707"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/plantoolbar" />
 
     <TextView
         android:id="@+id/iu_txt2"
