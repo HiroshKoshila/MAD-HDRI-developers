@@ -8,12 +8,10 @@ public class Hotel {
     private String hotelLocation;
     private String hotelUrl;
     private String hotelImage;
-    private String hotelEmail;
+    private String hotelUsername;
     private String hotelPassword;
 
-    public Hotel(String hotelName, String hotelDescription, String hotelAddress,
-           String hotelContactNo, String hotelLocation, String hotelUrl, String hotelImage,
-           String hotelEmail, String hotelPassword) {
+    public Hotel(String hotelName, String hotelDescription, String hotelAddress, String hotelContactNo, String hotelLocation, String hotelUrl, String hotelImage, String hotelUsername, String hotelPassword) {
         this.hotelName = hotelName;
         this.hotelDescription = hotelDescription;
         this.hotelAddress = hotelAddress;
@@ -21,7 +19,7 @@ public class Hotel {
         this.hotelLocation = hotelLocation;
         this.hotelUrl = hotelUrl;
         this.hotelImage = hotelImage;
-        this.hotelEmail = hotelEmail;
+        this.hotelUsername = hotelUsername;
         this.hotelPassword = hotelPassword;
     }
 
@@ -82,11 +80,11 @@ public class Hotel {
     }
 
     public String getHotelUsername() {
-        return hotelEmail;
+        return hotelUsername;
     }
 
     public void setHotelUsername(String hotelUsername) {
-        this.hotelEmail = hotelUsername;
+        this.hotelUsername = hotelUsername;
     }
 
     public String getHotelPassword() {
@@ -96,5 +94,4 @@ public class Hotel {
     public void setHotelPassword(String hotelPassword) {
         this.hotelPassword = hotelPassword;
     }
-
 }
