@@ -17,8 +17,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -43,6 +47,9 @@ public class TransportProviderReg extends AppCompatActivity {
     ImageView image;
     Button choose,signup;
     Bitmap bitmap;
+
+    //Authentication
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +170,30 @@ public class TransportProviderReg extends AppCompatActivity {
         url = (TextInputEditText) findViewById(R.id.trans_reg_url);
         email = (TextInputEditText) findViewById(R.id. trans_reg_email);
         password = (TextInputEditText) findViewById(R.id. trans_reg_password);
+
+
+        //Authentication
+        String Email5= email.getText().toString();
+        String Password5=password.getText().toString();
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuth.createUserWithEmailAndPassword(Email5,Password5)
+                .addOnCompleteListener(TransportProviderReg.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Registered Successfully!",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            email.setText("");
+                            password.setText("");
+                            Toast.makeText(getApplicationContext(),"Process Error!",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
 
 
 

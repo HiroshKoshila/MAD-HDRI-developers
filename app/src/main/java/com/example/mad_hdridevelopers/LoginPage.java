@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,25 +39,41 @@ public class LoginPage extends AppCompatActivity {
     }
 
     private void checkCredentials(){
-        String email2 = name.getText().toString();
-        String password2 = pass.getText().toString();
 
-        mLoadingBar.setTitle("Login");
-        mLoadingBar.setMessage("please wait");
-        mLoadingBar.setCanceledOnTouchOutside(false);
-        mLoadingBar.show();
+        if(name.length()==0){
+            name.setError("Enter your email!");
+        }
+        else if(pass.length()==0){
+            pass.setError("Enter your password!");
+        }
+        else{
 
-        mAuth.signInWithEmailAndPassword(email2,password2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    mLoadingBar.dismiss();
-                    Intent afterLogin = new Intent(LoginPage.this,Home.class);
-                    startActivity(afterLogin);
+            String email2 = name.getText().toString();
+            String password2 = pass.getText().toString();
 
+            mLoadingBar.setTitle("Login");
+            mLoadingBar.setMessage("please wait");
+            mLoadingBar.setCanceledOnTouchOutside(false);
+            mLoadingBar.show();
 
+            mAuth.signInWithEmailAndPassword(email2,password2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        mLoadingBar.dismiss();
+                        Intent afterLogin = new Intent(LoginPage.this,Home.class);
+                        startActivity(afterLogin);
+
+                    }
+                    else{
+                        mLoadingBar.dismiss();
+                        Toast.makeText(LoginPage.this,"Your email or password is wrong!",Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+
+        }
+
+
     }
 }

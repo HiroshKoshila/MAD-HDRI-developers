@@ -76,14 +76,14 @@
 
     <EditText
         android:id="@+id/logedit1"
-        android:layout_width="306dp"
-        android:layout_height="46dp"
+        android:layout_width="318dp"
+        android:layout_height="50dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/logedit1"
         android:inputType="textEmailAddress"
         android:textColorHint="#736F6F"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/logimg2"
         app:layout_constraintStart_toStartOf="@+id/logimg2"
         app:layout_constraintTop_toBottomOf="@+id/logtext1"
@@ -91,13 +91,14 @@
 
     <EditText
         android:id="@+id/logedit2"
-        android:layout_width="302dp"
+        android:layout_width="309dp"
         android:layout_height="49dp"
         android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="@string/logedit2"
         android:inputType="textPassword"
         android:textColorHint="#736F6F"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/logimg2"
         app:layout_constraintStart_toStartOf="@+id/logimg2"
         app:layout_constraintTop_toBottomOf="@+id/logedit1" />
