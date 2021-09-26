@@ -1,6 +1,8 @@
 package com.example.mad_hdridevelopers;
 
 public class Restaurant {
+
+
     private String restName;
     private String restDescription;
     private String restAddress;
@@ -10,7 +12,8 @@ public class Restaurant {
     private String restImage;
     private String restEmail;
     private String restPassword;
-
+    Restaurant(){
+    }
     public Restaurant(String restName, String restDescription,
                       String restAddress, String restContactNo, String restLocation,
                       String restUrl, String restImage, String restEmail, String restPassword) {
