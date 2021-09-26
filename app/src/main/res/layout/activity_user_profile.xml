@@ -43,14 +43,15 @@
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="414dp"
-            android:layout_height="188dp"
+            android:layout_height="175dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/plantoolbar">
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="241dp"
+                android:layout_marginLeft="20dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/profilepic" />
@@ -66,7 +67,7 @@
                     android:layout_width="266dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="45dp"
                     android:text="@string/user_name"
                     android:textColor="#0C0C0C"
                     android:textSize="34sp" />
@@ -110,15 +111,16 @@
             app:layout_constraintStart_toEndOf="@+id/user_btn1"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_btn1"
-        app:srcCompat="@drawable/white3" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_btn1"
+            app:srcCompat="@drawable/white3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

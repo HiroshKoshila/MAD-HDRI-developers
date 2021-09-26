@@ -88,7 +88,6 @@ public class UserProfile extends AppCompatActivity implements NavigationView.OnN
             case R.id.nav_cal:
                 Intent intent2 = new Intent(UserProfile.this,BudgetCal1.class);
                 startActivity(intent2);
-                Toast.makeText(this,"Cal",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_user:
                 break;
