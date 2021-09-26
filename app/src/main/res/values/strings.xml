@@ -182,12 +182,25 @@
     <string name="temprelic">Temple of tooth relic</string>
     <string name="kview">Kandy view point</string>
 
-    <string name="restimage">recyclerimage</string>
-    <string name="restname">provider name</string>
-    <string name="restaurantdesc">restaurant description</string>
-    <string name="restaurantaddress">restaurant address</string>
-    <string name="restaurantlocation">restaurant location</string>
-    <string name="restaurantcontact">restaurant contact</string>
-    <string name="restaurantemail">restaurant email</string>
-    <string name="restaurantabout">About</string>
+    <string name="hotelnameholder">Hotel Name Holder</string>
+    <string name="hoteladdressholder">Hotel Address Holder</string>
+    <string name="hotelemailholder">Hotel Email Holder</string>
+    <string name="hotelcontactholder">Hotel ContactNo Holder</string>
+    <string name="hotellocationholder">Hotel Location Holder</string>
+    <string name="hotelurlholder">Hotel URL Holder</string>
+    <string name="hotelabout">About,</string>
+    <string name="hoteldescholder">Hotel Description Holder</string>
+
+    <string name="restname">Rest Name Holder</string>
+    <string name="restaurantaddress">Rest Address Holder</string>
+    <string name="restaurantemail">Rest Email Holder</string>
+    <string name="restaurantcontact">Rest ContactNo Holder</string>
+    <string name="restaurantlocation">Rest Location Holder</string>
+    <string name="restaurantabout">About,</string>
+    <string name="restaurantdesc">Rest Description Holder</string>
+    <string name="hotelrecyimage1">Rest Image</string>
+    <string name="hotelrecyname">Rest Name</string>
+    <string name="hotelrecydesc">Rest Desc</string>
+    <string name="hotelrecylocation">Rest Location</string>
+    <string name="hotelrecycontactno">Rest ContactNo</string>
 </resources>
