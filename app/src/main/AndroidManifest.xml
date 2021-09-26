@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MADHDRIDevelopers">
-        <activity android:name=".ShopView"></activity>
+        <activity android:name=".PlanTour"></activity>
+        <activity android:name=".ShopView" />
         <activity
             android:name=".InsertImages"
             android:exported="true" />
@@ -61,7 +62,6 @@
             android:exported="true" />
         <activity android:name=".TransportProviderReg" />
         <activity android:name=".TransportView" />
-
         <activity android:name=".UserRegistration" />
         <activity android:name=".BusinessRegistration" />
         <activity android:name=".LoginPage" />

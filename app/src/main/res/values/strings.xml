@@ -165,6 +165,16 @@
     <string name="shopdescholder">Description of Shop and the Product</string>
     <string name="shopemailholder">Shop email</string>
 
+    <string name="addtaskplan">Add a new plan task</string>
+    <string name="pl_task">Task</string>
+    <string name="pl_desc">Description</string>
+    <string name="pl_time">Time</string>
+    <string name="et_plantask">Enter your task</string>
+    <string name="et_plandesc">Enter your description</string>
+    <string name="et_plantime">Enter time duration</string>
+    <string name="planbtn_cancel">Cancel</string>
+    <string name="planbtn_save">Save</string>
+
 
     <string name="kandy">Kandy</string>
     <string name="neardest">Near by destinations</string>

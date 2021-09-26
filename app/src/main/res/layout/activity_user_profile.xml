@@ -25,7 +25,7 @@
         android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/plantoolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/apple_green100"
@@ -46,7 +46,7 @@
             android:layout_height="188dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+            app:layout_constraintTop_toBottomOf="@+id/plantoolbar">
 
             <ImageView
                 android:id="@+id/imageView7"

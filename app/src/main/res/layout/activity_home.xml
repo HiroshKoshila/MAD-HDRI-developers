@@ -42,7 +42,7 @@
             app:layout_constraintTop_toBottomOf="@+id/mapLayout" />
 
         <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/plantoolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/apple_green100"
@@ -63,7 +63,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/plantoolbar"
             app:layout_constraintVertical_bias="0.0">
 
         </FrameLayout>
