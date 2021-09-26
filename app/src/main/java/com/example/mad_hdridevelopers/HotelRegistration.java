@@ -54,6 +54,14 @@ public class HotelRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hotel_registration);
 
+        name = (TextInputEditText) findViewById(R.id.hotelNameTV);
+        description = (TextInputEditText) findViewById(R.id.hotelDescTV);
+        address = (TextInputEditText) findViewById(R.id.hotelAddressTV);
+        contactno = (TextInputEditText) findViewById(R.id.hotelContactTV);
+        location = (TextInputEditText) findViewById(R.id.hotelLocationTV);
+        pageurl = (TextInputEditText) findViewById(R.id.hotelUrlTV);
+        email = (TextInputEditText) findViewById(R.id.hotelEmailTV);
+        password = (TextInputEditText) findViewById(R.id.hotelPasswordTV);
 
         image = (ImageView) findViewById(R.id.hotelImage);
         choose = (Button) findViewById(R.id.hotelImgChooseBtn);
@@ -88,8 +96,36 @@ public class HotelRegistration extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadToFirebase();
-                navigateToLogin();
+
+                if(name.length()==0){
+                    name.setError("Enter your name!");
+                }
+                else if(description.length()==0){
+                    description.setError("Enter description!");
+                }
+                else if(address.length()==0){
+                    address.setError("Enter Address!");
+                }
+                else if(contactno.length()==0){
+                    contactno.setError("Enter Contact Number!");
+                }
+                else if(location.length()==0){
+                    location.setError("Enter Location!");
+                }
+                else if(email.length()==0){
+                    email.setError("Enter your email!");
+                }
+                else if(password.length()==0){
+                    password.setError("Enter your password!");
+                }
+                else if(password.length()<6){
+                    password.setError("Your password must contain more than 6 digits!");
+                }
+                else{
+                    uploadToFirebase();
+                    navigateToLogin();
+                }
+
             }
         });
 

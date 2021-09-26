@@ -53,6 +53,14 @@ public class ShopRegistration extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop_registration);
 
+        name = (TextInputEditText) findViewById(R.id.shopname_et);
+        description = (TextInputEditText) findViewById(R.id.shopdesc_et);
+        address = (TextInputEditText) findViewById(R.id.shopaddress_et);
+        contactnumber = (TextInputEditText) findViewById(R.id.shopno_et);
+        location = (TextInputEditText) findViewById(R.id.shoploc_et);
+        pageurl = (TextInputEditText) findViewById(R.id.shopurl_et);
+        email = (TextInputEditText) findViewById(R.id.shopue_et);
+        password = (TextInputEditText) findViewById(R.id.shoppwd_et);
 
         image = (ImageView) findViewById(R.id.shop_image);
         choose = (Button) findViewById(R.id.shopimage_choosebtn);
@@ -88,8 +96,34 @@ public class ShopRegistration extends AppCompatActivity {
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadtofirebase();
-                navigateToLogin();
+                if(name.length()==0){
+                    name.setError("Enter your name!");
+                }
+                else if(description.length()==0){
+                    description.setError("Enter description!");
+                }
+                else if(address.length()==0){
+                    address.setError("Enter Address!");
+                }
+                else if(contactnumber.length()==0){
+                    contactnumber.setError("Enter Contact Number!");
+                }
+                else if(location.length()==0){
+                    location.setError("Enter Location!");
+                }
+                else if(email.length()==0){
+                    email.setError("Enter your email!");
+                }
+                else if(password.length()==0){
+                    password.setError("Enter your password!");
+                }
+                else if(password.length()<6){
+                    password.setError("Your password must contain more than 6 digits!");
+                }
+                else{
+                    uploadtofirebase();
+                    navigateToLogin();
+                }
             }
         });
 

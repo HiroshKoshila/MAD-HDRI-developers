@@ -49,6 +49,15 @@ public class TransportProviderReg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transport_provider_reg);
 
+        name = (TextInputEditText) findViewById(R.id.trans_reg_name);
+        description = (TextInputEditText) findViewById(R.id.trans_reg_desc);
+        address = (TextInputEditText) findViewById(R.id.trans_reg_address);
+        contactno = (TextInputEditText) findViewById(R.id.trans_reg_contact);
+        location = (TextInputEditText) findViewById(R.id.trans_reg_location);
+        url = (TextInputEditText) findViewById(R.id.trans_reg_url);
+        email = (TextInputEditText) findViewById(R.id.trans_reg_email);
+        password = (TextInputEditText) findViewById(R.id.trans_reg_password);
+
         image = (ImageView) findViewById(R.id.choosedimagetrans);
         signup = (Button) findViewById(R.id.transCreateBtn);
         choose = (Button) findViewById(R.id.transchoosebtn);
@@ -83,8 +92,34 @@ public class TransportProviderReg extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadtofirebase();
-                navigateToLogin();
+                if(name.length()==0){
+                    name.setError("Enter your name!");
+                }
+                else if(description.length()==0){
+                    description.setError("Enter description!");
+                }
+                else if(address.length()==0){
+                    address.setError("Enter Address!");
+                }
+                else if(contactno.length()==0){
+                    contactno.setError("Enter Contact Number!");
+                }
+                else if(location.length()==0){
+                    location.setError("Enter Location!");
+                }
+                else if(email.length()==0){
+                    email.setError("Enter your email!");
+                }
+                else if(password.length()==0){
+                    password.setError("Enter your password!");
+                }
+                else if(password.length()<6){
+                    password.setError("Your password must contain more than 6 digits!");
+                }
+                else{
+                    uploadtofirebase();
+                    navigateToLogin();
+                }
             }
         });
 
