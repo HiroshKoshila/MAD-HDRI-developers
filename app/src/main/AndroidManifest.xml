@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo3"
         android:label="iTourSL"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
