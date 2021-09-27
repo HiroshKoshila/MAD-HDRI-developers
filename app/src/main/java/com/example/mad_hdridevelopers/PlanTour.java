@@ -262,7 +262,7 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
             case R.id.nav_trans:
                 break;
             case R.id.nav_cal:
-                Intent intent2 = new Intent(PlanTour.this,BudgetCal1.class);
+                Intent intent2 = new Intent(PlanTour.this,BudgetCal.class);
                 startActivity(intent2);
                 Toast.makeText(this,"Cal",Toast.LENGTH_SHORT).show();
                 break;

@@ -37,10 +37,10 @@ public class TodayBudget extends RecyclerView.Adapter<TodayBudget.viewHolder>{
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
 
         final Budget budget = myBudgetList.get(position);
-        holder.item.setText(budget.getItem());
-        holder.date.setText(budget.getDate());
-        holder.notes.setText(budget.getNotes());
-        holder.amount.setText(budget.getAmount());
+        holder.item.setText("Item: "+budget.getItem());
+        holder.date.setText("Date: "+budget.getDate());
+        holder.notes.setText("Notes: "+budget.getNotes());
+        holder.amount.setText("Amount: "+budget.getAmount());
 
         switch (budget.getItem()){
             case "Food and Beverages":

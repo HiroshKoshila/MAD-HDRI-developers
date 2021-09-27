@@ -58,7 +58,7 @@
                 android:gravity="center"
                 android:text="Spending"
                 android:textColor="@color/black"
-                android:textSize="34sp"
+                android:textSize="24dp"
                 android:textStyle="bold" />
 
             <androidx.coordinatorlayout.widget.CoordinatorLayout

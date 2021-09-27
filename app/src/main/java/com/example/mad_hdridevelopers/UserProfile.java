@@ -86,7 +86,7 @@ public class UserProfile extends AppCompatActivity implements NavigationView.OnN
 
                 break;
             case R.id.nav_cal:
-                Intent intent2 = new Intent(UserProfile.this,BudgetCal1.class);
+                Intent intent2 = new Intent(UserProfile.this,BudgetCal.class);
                 startActivity(intent2);
                 break;
             case R.id.nav_user:
