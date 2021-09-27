@@ -47,7 +47,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
 
         //Buttons
-
         Button map = findViewById(R.id.home_map);
         Button transport = findViewById(R.id.home_vehicle);
         Button hotel = findViewById(R.id.home_hotels);

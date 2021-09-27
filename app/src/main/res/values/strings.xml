@@ -203,6 +203,9 @@
     <string name="hotelrecydesc">Rest Desc</string>
     <string name="hotelrecylocation">Rest Location</string>
     <string name="hotelrecycontactno">Rest ContactNo</string>
+    <string name="pretask_tv">Task</string>
+    <string name="predesc_tv">Description</string>
+    <string name="pretime_tv">Time</string>
 
     <string-array name="items">
         <item> Select Item </item>
