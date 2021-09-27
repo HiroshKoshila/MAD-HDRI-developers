@@ -8,7 +8,7 @@ public class Budget {
     public Budget() {
     }
 
-    public Budget(String item, String date, String id, String notes, Integer amount) {
+    public Budget(String item, String date, String id, String notes, int amount) {
         this.item = item;
         this.date = date;
         this.id = id;
