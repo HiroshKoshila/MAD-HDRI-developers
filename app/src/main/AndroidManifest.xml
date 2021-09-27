@@ -62,9 +62,6 @@
         <activity
             android:name=".ShopRegistration"
             android:exported="true" />
-        <activity
-            android:name=".BudgetCal1"
-            android:exported="true" />
         <activity android:name=".TransportProviderReg" />
         <activity android:name=".TransportView" />
         <activity android:name=".UserRegistration" />

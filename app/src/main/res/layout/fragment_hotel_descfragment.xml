@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hoteladdressholder"
                 android:textColor="#000"
                 android:textSize="25sp" />
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hotelemailholder"
                 android:textColor="#000"
                 android:textSize="25sp" />
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hotelcontactholder"
                 android:textColor="#000"
                 android:textSize="25sp" />
@@ -70,7 +70,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="10dp">
 
                 <ImageView
                     android:id="@+id/locationon"
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hotelurlholder"
                 android:textColor="#000"
                 android:textSize="25sp" />
@@ -113,17 +113,17 @@
 
 
             <LinearLayout
-                android:layout_width="367dp"
+                android:layout_width="375dp"
                 android:layout_height="149dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/hotelabout"
-                    android:layout_width="316dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
@@ -133,7 +133,7 @@
 
                 <TextView
                     android:id="@+id/hoteldescholder"
-                    android:layout_width="316dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
