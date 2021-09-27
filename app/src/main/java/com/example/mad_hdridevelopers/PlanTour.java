@@ -12,14 +12,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,6 +35,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.text.DateFormat;
+import java.util.Date;
 
 public class PlanTour extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -73,12 +83,12 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        //loader = new ProgressDialog(this);
+        loader = new ProgressDialog(this);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         onlineuserID = mUser.getUid();
-        reference = FirebaseDatabase.getInstance().getReference().child("tasks").child(onlineuserID);
+        reference = FirebaseDatabase.getInstance().getReference().child("Tasks").child(onlineuserID);
 
 
         floatingActionButton = findViewById(R.id.fab);
@@ -90,12 +100,10 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
         });
 
         //side nav
-
         drawerLayout = findViewById(R.id.plan_layout);
         navigationView = findViewById(R.id.nav_view);
 
         //navigate menu side
-
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -106,10 +114,6 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
 
         navigationView.setCheckedItem(R.id.nav_trans);
 
-
-
-
-
     }
 
     private void addTask() {
@@ -119,34 +123,134 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
         View myView = inflator.inflate(R.layout.planinput_file, null);
         myDialog.setView(myView);
 
-        AlertDialog dialog = myDialog.create();
+        final AlertDialog dialog = myDialog.create();
         dialog.setCancelable(false);
-        dialog.show();
+        //dialog.show();
 
         final EditText task = myView.findViewById(R.id.et_plantask);
         final EditText description = myView.findViewById(R.id.et_plandesc);
         final EditText time = myView.findViewById(R.id.et_plantime);
-        Button save = myView.findViewById(R.id.planbtn_save);
-        Button cancel = myView.findViewById(R.id.planbtn_cancel);
+
+        final Button save = myView.findViewById(R.id.planbtn_save);
+        final Button cancel = myView.findViewById(R.id.planbtn_cancel);
 
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent mapView = new Intent(PlanTour.this, PlanTour.class);
-                startActivity(mapView);
+            public void onClick(View view) {
+                dialog.dismiss();
             }
         });
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent mapView = new Intent(PlanTour.this, PlanTour.class);
-                startActivity(mapView);
+            public void onClick(View view) {
+                String mTask = task.getText().toString().trim();
+                String mDescription = description.getText().toString().trim();
+                String mTime = time.getText().toString().trim();
+                String id = reference.push().getKey();
+                String date = DateFormat.getDateInstance().format(new Date());
+
+                if (TextUtils.isEmpty(mTask)) {
+                    task.setError("Task Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(mDescription)) {
+                    description.setError("Description Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(mTime)) {
+                    time.setError("Time is Required");
+                    return;
+                } else {
+                    loader.setMessage("Adding Your Data");
+                    loader.setCanceledOnTouchOutside(false);
+                    loader.show();
+
+                    PlanModel model = new PlanModel(mTask, mDescription, mTime, id, date);
+                    reference.child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(PlanTour.this, "Plan has been inserted successfully", Toast.LENGTH_SHORT).show();
+                                loader.dismiss();
+                            } else {
+                                String error = task.getException().toString();
+                                Toast.makeText(PlanTour.this, "failed" + error, Toast.LENGTH_SHORT).show();
+                                loader.dismiss();
+                            }
+                        }
+                    });
+
+                }
+                dialog.dismiss();
+
             }
         });
+
+        dialog.show();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseRecyclerOptions<PlanModel> options = new FirebaseRecyclerOptions.Builder<PlanModel>()
+                .setQuery(reference, PlanModel.class)
+                .build();
+
+        FirebaseRecyclerAdapter<PlanModel, MyViewHolder> adapter = new FirebaseRecyclerAdapter<PlanModel, MyViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull  MyViewHolder holder, int position, @NonNull PlanModel planmodel) {
+                /*holder.setDate(planmodel.getDate());
+                holder.setTest(planmodel.getTask());
+                holder.setDesc(planmodel.getDescription());
+                holder.setTime(planmodel.getTime());*/
+            }
+
+            @NonNull
+            @Override
+            public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.planretrieved_layout,parent,false);
+                return new MyViewHolder(view);
+            }
+        };
+
+        recyclerView.setAdapter(adapter);
+        adapter.startListening();
+    }
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
+        View mView;
+
+        public MyViewHolder(@NonNull View ItemView){
+            super(ItemView);
+
+        }
+
+        /*public void setTest(String task){
+            TextView taskTestView = mView.findViewById(R.id.pretask_tv);
+            taskTestView.setText(task);
+        }
+
+        public void setDesc(String desc){
+            TextView descTestView = mView.findViewById(R.id.predesc_tv);
+            descTestView.setText(desc);
+        }
+
+        public void setTime(String time){
+            TextView timeTestView = mView.findViewById(R.id.pretime_tv);
+            timeTestView.setText(time);
+        }
+
+        public void setDate(String date){
+            TextView dateTestView = mView.findViewById(R.id.predate_tv);
+        }*/
+
+    }
+
+
+    //Navigation
     @Override
     public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
