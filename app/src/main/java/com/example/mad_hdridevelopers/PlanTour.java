@@ -167,8 +167,8 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
                     loader.setCanceledOnTouchOutside(false);
                     loader.show();
 
-                    PlanModel model = new PlanModel(mTask, mDescription, mTime, id, date);
-                    reference.child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    PlanModel planmodel = new PlanModel(mTask, mDescription, mTime, id, date);
+                    reference.child(id).setValue(planmodel).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
@@ -201,11 +201,25 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
 
         FirebaseRecyclerAdapter<PlanModel, MyViewHolder> adapter = new FirebaseRecyclerAdapter<PlanModel, MyViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull  MyViewHolder holder, int position, @NonNull PlanModel planmodel) {
-                /*holder.setDate(planmodel.getDate());
+            protected void onBindViewHolder(@NonNull  MyViewHolder holder,final int position, @NonNull final PlanModel planmodel) {
+                holder.setDate(planmodel.getDate());
                 holder.setTest(planmodel.getTask());
                 holder.setDesc(planmodel.getDescription());
-                holder.setTime(planmodel.getTime());*/
+                holder.setTime(planmodel.getTime());
+
+                //update plan task
+                holder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        key = getRef(position).getKey();
+                        task = planmodel.getTask();
+                        description = planmodel.getDescription();
+                        time = planmodel.getTime();
+
+                        updateTask();
+                    }
+                });
+
             }
 
             @NonNull
@@ -225,10 +239,10 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
 
         public MyViewHolder(@NonNull View ItemView){
             super(ItemView);
-
+            mView = itemView;
         }
 
-        /*public void setTest(String task){
+        public void setTest(String task){
             TextView taskTestView = mView.findViewById(R.id.pretask_tv);
             taskTestView.setText(task);
         }
@@ -245,8 +259,83 @@ public class PlanTour extends AppCompatActivity implements NavigationView.OnNavi
 
         public void setDate(String date){
             TextView dateTestView = mView.findViewById(R.id.predate_tv);
-        }*/
+        }
 
+    }
+
+   private void updateTask() {
+        AlertDialog.Builder myDialog = new AlertDialog.Builder(this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.planupdate_data, null);
+        myDialog.setView(view);
+
+        final AlertDialog dialog = myDialog.create();
+
+        final EditText mTask = view.findViewById(R.id.pluptask_et);
+        final EditText mDescription = view.findViewById(R.id.plupdesc_et);
+        final EditText mTime = view.findViewById(R.id.pluptime_et);
+
+        mTask.setText(task);
+        mTask.setSelection(task.length());
+
+        mDescription.setText(description);
+        mDescription.setSelection(description.length());
+
+        mTime.setText(time);
+        mTime.setSelection(time.length());
+
+        Button delButton = view.findViewById(R.id.plndelete_btn);
+        Button updateButton = view.findViewById(R.id.plnupdate_btn);
+
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                task = mTask.getText().toString().trim();
+                description = mDescription.getText().toString().trim();
+                time = mTime.getText().toString().trim();
+
+                String date = DateFormat.getDateInstance().format(new Date());
+
+                PlanModel planmodel = new PlanModel(task, description, time, key, date);
+
+                reference.child(key).setValue(planmodel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        if (task.isSuccessful()){
+                            Toast.makeText(PlanTour.this, "Data has been updated successfully", Toast.LENGTH_SHORT).show();
+                        }else {
+                            String err = task.getException().toString();
+                            Toast.makeText(PlanTour.this, "update failed "+err, Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+
+                dialog.dismiss();
+
+            }
+        });
+
+        delButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reference.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
+                            Toast.makeText(PlanTour.this, "Task deleted successfully", Toast.LENGTH_SHORT).show();
+                        }else {
+                            String err = task.getException().toString();
+                            Toast.makeText(PlanTour.this, "Failed to delete task "+ err, Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
 
