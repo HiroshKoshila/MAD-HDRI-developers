@@ -206,6 +206,14 @@
     <string name="pretask_tv">Task</string>
     <string name="predesc_tv">Description</string>
     <string name="pretime_tv">Time</string>
+    <string name="pluptask_et">Enter Your Task</string>
+    <string name="plupdesc_et">Enter Description</string>
+    <string name="pluptime_et">Enter Time Duration</string>
+    <string name="plndelete_btn">DELETE</string>
+    <string name="plnupdate_btn">UPDATE</string>
+    <string name="pluptask_tv">Task</string>
+    <string name="plupdesc_tv">Description</string>
+    <string name="pluptime_tv">Time</string>
 
     <string-array name="items">
         <item> Select Item </item>
